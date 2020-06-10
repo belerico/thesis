@@ -1,0 +1,23 @@
+2020-06-10 00:22:50|INFO Experiment 0: 2020-06-10 00:22:50
+2020-06-10 00:22:50|INFO Current config:
+2020-06-10 00:22:50|INFO LANG: ['latin', 'english', 'swedish', 'german']
+2020-06-10 00:22:50|INFO EMBEDDING_SIZE: 100
+2020-06-10 00:22:50|INFO SITER: 10
+2020-06-10 00:22:50|INFO DITER: 10
+2020-06-10 00:22:50|INFO PREPROCESS: False
+2020-06-10 00:22:50|INFO Creating compass for LATIN
+2020-06-10 00:22:51|INFO Training compass model
+2020-06-10 00:27:54|INFO Training slice1 model
+2020-06-10 00:28:43|INFO Training slice2 model
+2020-06-10 00:32:52|INFO Creating compass for ENGLISH
+2020-06-10 00:32:52|INFO Training compass model
+2020-06-10 00:37:45|INFO Training slice1 model
+2020-06-10 00:39:53|INFO Training slice2 model
+2020-06-10 00:42:47|INFO Creating compass for SWEDISH
+2020-06-10 00:42:56|INFO Training compass model
+2020-06-10 02:00:56|INFO Training slice1 model
+2020-06-10 02:30:19|INFO Training slice2 model
+2020-06-10 03:14:57|INFO Creating compass for GERMAN
+2020-06-10 03:15:07|INFO Training compass model
+2020-06-10 04:13:47|INFO Training slice1 model
+2020-06-10 04:40:43|INFO Training slice2 model
