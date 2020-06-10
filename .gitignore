@@ -1,6 +1,7 @@
 codalab_challenge/data/
 codalab_challenge/starting_kit/
 codalab_challenge/model/
+codalab_challenge/experiments/*
 examples/*
 model/*
 
