@@ -1,14 +1,22 @@
+import os
+import subprocess
+from distutils.dir_util import copy_tree
+
 import numpy
 from gensim.models.word2vec import Word2Vec
 from scipy.spatial.distance import cosine
-from scipy.stats import spearmanr
-from sklearn.metrics import classification_report
 
-from config import CURRENT_EXP_DIR, config, get_logger
+from config import CURRENT_EXP_DIR, config
 
 if __name__ == "__main__":
     CURRENT_EXP_DIR = CURRENT_EXP_DIR.split("_")[0] + "_0"
-    logger = get_logger(exp_dir=CURRENT_EXP_DIR, exp_num=0)
+    if not os.path.exists(CURRENT_EXP_DIR + "/res/answer/task1"):
+        os.makedirs(CURRENT_EXP_DIR + "/res/answer/task1")
+    if not os.path.exists(CURRENT_EXP_DIR + "/res/answer/task2"):
+        os.makedirs(CURRENT_EXP_DIR + "/res/answer/task2")
+    if not os.path.exists(CURRENT_EXP_DIR + "/ref"):
+        copy_tree("./data/ref", CURRENT_EXP_DIR + "/ref")
+    # logger = get_logger(exp_dir=CURRENT_EXP_DIR, exp_num=0)
     for lang in config["LANG"]:
         # Load models
         model1 = Word2Vec.load(
@@ -23,25 +31,22 @@ if __name__ == "__main__":
             + lang
             + "/semeval2020_ulscd_"
             + lang[:3]
-            + "/truth/binary.txt",
+            + "/targets.txt",
             dtype=str,
             delimiter="\t",
         )
         # Task 1 - Binary Classification
         predictions = []
-        for word in binary_truth[:, 0]:
+        for word in binary_truth:
             prediction = (
                 0 if 1 - cosine(model1[word], model2[word]) >= 0.7 else 1
             )
-            predictions.append(prediction)
-        logger.info("CLassification score for " + lang)
-        logger.info(
-            "\n"
-            + classification_report(
-                binary_truth[:, 1].astype(float),
-                numpy.array(predictions),
-                target_names=["class 0 (stable)", "class 1 (change)"],
-            )
+            predictions.append([word, str(prediction)])
+        numpy.savetxt(
+            CURRENT_EXP_DIR + "/res/answer/task1/" + lang + ".txt",
+            numpy.array(predictions),
+            fmt="%s",
+            delimiter="\t",
         )
         # Load scores truths
         score_truth = numpy.loadtxt(
@@ -49,17 +54,19 @@ if __name__ == "__main__":
             + lang
             + "/semeval2020_ulscd_"
             + lang[:3]
-            + "/truth/graded.txt",
+            + "/targets.txt",
             dtype=str,
             delimiter="\t",
         )
         # Task 2 - Semantic Shift Score
         scores = []
-        for word in score_truth[:, 0]:
+        for word in score_truth:
             score = 1 - cosine(model1[word], model2[word])
-            scores.append(score)
-        rho, _ = spearmanr(scores, score_truth[:, 1], nan_policy="raise")
-        logger.info("CLassification score for " + lang)
-        logger.info(
-            "Spearman score for " + lang + ": " + str(rho)
+            scores.append([word, score])
+        numpy.savetxt(
+            CURRENT_EXP_DIR + "/res/answer/task2/" + lang + ".txt",
+            numpy.array(scores),
+            fmt="%s",
+            delimiter="\t",
         )
+    subprocess.run(["./scoring_program/evaluation.py", CURRENT_EXP_DIR, CURRENT_EXP_DIR])

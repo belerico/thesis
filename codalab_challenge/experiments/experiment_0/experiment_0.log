@@ -20,127 +20,251 @@
 2020-06-10 03:14:57|INFO Creating compass for GERMAN
 2020-06-10 03:15:07|INFO Training compass model
 2020-06-10 04:13:47|INFO Training slice1 model
-2020-06-10 04:40:43|INFO Training slice2 model2020-06-10 18:41:46|INFO loading Word2Vec object from ./experiments/experiment_0/model/latin/corpus1.model
-2020-06-10 18:41:46|DEBUG {'uri': './experiments/experiment_0/model/latin/corpus1.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
-2020-06-10 18:41:46|INFO loading wv recursively from ./experiments/experiment_0/model/latin/corpus1.model.wv.* with mmap=None
-2020-06-10 18:41:46|INFO setting ignored attribute vectors_norm to None
-2020-06-10 18:41:46|INFO loading vocabulary recursively from ./experiments/experiment_0/model/latin/corpus1.model.vocabulary.* with mmap=None
-2020-06-10 18:41:46|INFO loading trainables recursively from ./experiments/experiment_0/model/latin/corpus1.model.trainables.* with mmap=None
-2020-06-10 18:41:46|INFO setting ignored attribute cum_table to None
-2020-06-10 18:41:46|INFO loaded ./experiments/experiment_0/model/latin/corpus1.model
-2020-06-10 18:41:46|INFO loading Word2Vec object from ./experiments/experiment_0/model/latin/corpus2.model
-2020-06-10 18:41:46|DEBUG {'uri': './experiments/experiment_0/model/latin/corpus2.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
-2020-06-10 18:41:47|INFO loading wv recursively from ./experiments/experiment_0/model/latin/corpus2.model.wv.* with mmap=None
-2020-06-10 18:41:47|INFO setting ignored attribute vectors_norm to None
-2020-06-10 18:41:47|INFO loading vocabulary recursively from ./experiments/experiment_0/model/latin/corpus2.model.vocabulary.* with mmap=None
-2020-06-10 18:41:47|INFO loading trainables recursively from ./experiments/experiment_0/model/latin/corpus2.model.trainables.* with mmap=None
-2020-06-10 18:41:47|INFO setting ignored attribute cum_table to None
-2020-06-10 18:41:47|INFO loaded ./experiments/experiment_0/model/latin/corpus2.model
-2020-06-10 18:41:47|INFO CLassification score for latin
-2020-06-10 18:41:47|INFO 
+2020-06-11 08:34:53|INFO loading Word2Vec object from ./experiments/experiment_0/model/latin/corpus1.model
+2020-06-11 08:34:53|DEBUG {'uri': './experiments/experiment_0/model/latin/corpus1.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:34:53|INFO loading wv recursively from ./experiments/experiment_0/model/latin/corpus1.model.wv.* with mmap=None
+2020-06-11 08:34:53|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:34:53|INFO loading vocabulary recursively from ./experiments/experiment_0/model/latin/corpus1.model.vocabulary.* with mmap=None
+2020-06-11 08:34:53|INFO loading trainables recursively from ./experiments/experiment_0/model/latin/corpus1.model.trainables.* with mmap=None
+2020-06-11 08:34:53|INFO setting ignored attribute cum_table to None
+2020-06-11 08:34:53|INFO loaded ./experiments/experiment_0/model/latin/corpus1.model
+2020-06-11 08:34:53|INFO loading Word2Vec object from ./experiments/experiment_0/model/latin/corpus2.model
+2020-06-11 08:34:53|DEBUG {'uri': './experiments/experiment_0/model/latin/corpus2.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:34:54|INFO loading wv recursively from ./experiments/experiment_0/model/latin/corpus2.model.wv.* with mmap=None
+2020-06-11 08:34:54|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:34:54|INFO loading vocabulary recursively from ./experiments/experiment_0/model/latin/corpus2.model.vocabulary.* with mmap=None
+2020-06-11 08:34:54|INFO loading trainables recursively from ./experiments/experiment_0/model/latin/corpus2.model.trainables.* with mmap=None
+2020-06-11 08:34:54|INFO setting ignored attribute cum_table to None
+2020-06-11 08:34:54|INFO loaded ./experiments/experiment_0/model/latin/corpus2.model
+2020-06-11 08:34:54|INFO CLassification score for latin
+2020-06-11 08:34:54|INFO 
                   precision    recall  f1-score   support
 
-class 0 (stable)       0.27      0.43      0.33        14
-class 1 (change)       0.56      0.38      0.45        26
+class 0 (stable)       0.67      0.29      0.40        14
+class 1 (change)       0.71      0.92      0.80        26
 
-        accuracy                           0.40        40
-       macro avg       0.41      0.41      0.39        40
-    weighted avg       0.46      0.40      0.41        40
+        accuracy                           0.70        40
+       macro avg       0.69      0.60      0.60        40
+    weighted avg       0.69      0.70      0.66        40
 
-2020-06-10 18:41:47|INFO CLassification score for latin
-2020-06-10 18:41:47|INFO Spearman score for latin: -0.32693841210505986
-2020-06-10 18:41:47|INFO loading Word2Vec object from ./experiments/experiment_0/model/english/corpus1.model
-2020-06-10 18:41:47|DEBUG {'uri': './experiments/experiment_0/model/english/corpus1.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
-2020-06-10 18:41:47|INFO loading wv recursively from ./experiments/experiment_0/model/english/corpus1.model.wv.* with mmap=None
-2020-06-10 18:41:47|INFO setting ignored attribute vectors_norm to None
-2020-06-10 18:41:47|INFO loading vocabulary recursively from ./experiments/experiment_0/model/english/corpus1.model.vocabulary.* with mmap=None
-2020-06-10 18:41:47|INFO loading trainables recursively from ./experiments/experiment_0/model/english/corpus1.model.trainables.* with mmap=None
-2020-06-10 18:41:47|INFO setting ignored attribute cum_table to None
-2020-06-10 18:41:47|INFO loaded ./experiments/experiment_0/model/english/corpus1.model
-2020-06-10 18:41:47|INFO loading Word2Vec object from ./experiments/experiment_0/model/english/corpus2.model
-2020-06-10 18:41:47|DEBUG {'uri': './experiments/experiment_0/model/english/corpus2.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
-2020-06-10 18:41:48|INFO loading wv recursively from ./experiments/experiment_0/model/english/corpus2.model.wv.* with mmap=None
-2020-06-10 18:41:48|INFO setting ignored attribute vectors_norm to None
-2020-06-10 18:41:48|INFO loading vocabulary recursively from ./experiments/experiment_0/model/english/corpus2.model.vocabulary.* with mmap=None
-2020-06-10 18:41:48|INFO loading trainables recursively from ./experiments/experiment_0/model/english/corpus2.model.trainables.* with mmap=None
-2020-06-10 18:41:48|INFO setting ignored attribute cum_table to None
-2020-06-10 18:41:48|INFO loaded ./experiments/experiment_0/model/english/corpus2.model
-2020-06-10 18:41:48|INFO CLassification score for english
-2020-06-10 18:41:48|INFO 
+2020-06-11 08:34:54|INFO CLassification score for latin
+2020-06-11 08:34:54|INFO Spearman score for latin: -0.32693841210505986
+2020-06-11 08:34:54|INFO loading Word2Vec object from ./experiments/experiment_0/model/english/corpus1.model
+2020-06-11 08:34:54|DEBUG {'uri': './experiments/experiment_0/model/english/corpus1.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:34:55|INFO loading wv recursively from ./experiments/experiment_0/model/english/corpus1.model.wv.* with mmap=None
+2020-06-11 08:34:55|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:34:55|INFO loading vocabulary recursively from ./experiments/experiment_0/model/english/corpus1.model.vocabulary.* with mmap=None
+2020-06-11 08:34:55|INFO loading trainables recursively from ./experiments/experiment_0/model/english/corpus1.model.trainables.* with mmap=None
+2020-06-11 08:34:55|INFO setting ignored attribute cum_table to None
+2020-06-11 08:34:55|INFO loaded ./experiments/experiment_0/model/english/corpus1.model
+2020-06-11 08:34:55|INFO loading Word2Vec object from ./experiments/experiment_0/model/english/corpus2.model
+2020-06-11 08:34:55|DEBUG {'uri': './experiments/experiment_0/model/english/corpus2.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:34:55|INFO loading wv recursively from ./experiments/experiment_0/model/english/corpus2.model.wv.* with mmap=None
+2020-06-11 08:34:55|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:34:55|INFO loading vocabulary recursively from ./experiments/experiment_0/model/english/corpus2.model.vocabulary.* with mmap=None
+2020-06-11 08:34:55|INFO loading trainables recursively from ./experiments/experiment_0/model/english/corpus2.model.trainables.* with mmap=None
+2020-06-11 08:34:55|INFO setting ignored attribute cum_table to None
+2020-06-11 08:34:55|INFO loaded ./experiments/experiment_0/model/english/corpus2.model
+2020-06-11 08:34:55|INFO CLassification score for english
+2020-06-11 08:34:55|INFO 
                   precision    recall  f1-score   support
 
-class 0 (stable)       0.47      0.38      0.42        21
-class 1 (change)       0.35      0.44      0.39        16
+class 0 (stable)       0.67      0.19      0.30        21
+class 1 (change)       0.45      0.88      0.60        16
 
-        accuracy                           0.41        37
-       macro avg       0.41      0.41      0.40        37
-    weighted avg       0.42      0.41      0.41        37
+        accuracy                           0.49        37
+       macro avg       0.56      0.53      0.45        37
+    weighted avg       0.57      0.49      0.43        37
 
-2020-06-10 18:41:48|INFO CLassification score for english
-2020-06-10 18:41:48|INFO Spearman score for english: -0.36979074625917013
-2020-06-10 18:41:48|INFO loading Word2Vec object from ./experiments/experiment_0/model/swedish/corpus1.model
-2020-06-10 18:41:48|DEBUG {'uri': './experiments/experiment_0/model/swedish/corpus1.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
-2020-06-10 18:41:49|INFO loading wv recursively from ./experiments/experiment_0/model/swedish/corpus1.model.wv.* with mmap=None
-2020-06-10 18:41:49|INFO loading vectors from ./experiments/experiment_0/model/swedish/corpus1.model.wv.vectors.npy with mmap=None
-2020-06-10 18:41:49|INFO setting ignored attribute vectors_norm to None
-2020-06-10 18:41:49|INFO loading vocabulary recursively from ./experiments/experiment_0/model/swedish/corpus1.model.vocabulary.* with mmap=None
-2020-06-10 18:41:49|INFO loading trainables recursively from ./experiments/experiment_0/model/swedish/corpus1.model.trainables.* with mmap=None
-2020-06-10 18:41:49|INFO loading syn1neg from ./experiments/experiment_0/model/swedish/corpus1.model.trainables.syn1neg.npy with mmap=None
-2020-06-10 18:41:49|INFO setting ignored attribute cum_table to None
-2020-06-10 18:41:49|INFO loaded ./experiments/experiment_0/model/swedish/corpus1.model
-2020-06-10 18:41:50|INFO loading Word2Vec object from ./experiments/experiment_0/model/swedish/corpus2.model
-2020-06-10 18:41:50|DEBUG {'uri': './experiments/experiment_0/model/swedish/corpus2.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
-2020-06-10 18:41:51|INFO loading wv recursively from ./experiments/experiment_0/model/swedish/corpus2.model.wv.* with mmap=None
-2020-06-10 18:41:51|INFO loading vectors from ./experiments/experiment_0/model/swedish/corpus2.model.wv.vectors.npy with mmap=None
-2020-06-10 18:41:51|INFO setting ignored attribute vectors_norm to None
-2020-06-10 18:41:51|INFO loading vocabulary recursively from ./experiments/experiment_0/model/swedish/corpus2.model.vocabulary.* with mmap=None
-2020-06-10 18:41:51|INFO loading trainables recursively from ./experiments/experiment_0/model/swedish/corpus2.model.trainables.* with mmap=None
-2020-06-10 18:41:51|INFO loading syn1neg from ./experiments/experiment_0/model/swedish/corpus2.model.trainables.syn1neg.npy with mmap=None
-2020-06-10 18:41:51|INFO setting ignored attribute cum_table to None
-2020-06-10 18:41:51|INFO loaded ./experiments/experiment_0/model/swedish/corpus2.model
-2020-06-10 18:41:52|INFO CLassification score for swedish
-2020-06-10 18:41:52|INFO 
+2020-06-11 08:34:55|INFO CLassification score for english
+2020-06-11 08:34:55|INFO Spearman score for english: -0.36979074625917013
+2020-06-11 08:34:55|INFO loading Word2Vec object from ./experiments/experiment_0/model/swedish/corpus1.model
+2020-06-11 08:34:55|DEBUG {'uri': './experiments/experiment_0/model/swedish/corpus1.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:34:56|INFO loading wv recursively from ./experiments/experiment_0/model/swedish/corpus1.model.wv.* with mmap=None
+2020-06-11 08:34:56|INFO loading vectors from ./experiments/experiment_0/model/swedish/corpus1.model.wv.vectors.npy with mmap=None
+2020-06-11 08:34:56|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:34:56|INFO loading vocabulary recursively from ./experiments/experiment_0/model/swedish/corpus1.model.vocabulary.* with mmap=None
+2020-06-11 08:34:56|INFO loading trainables recursively from ./experiments/experiment_0/model/swedish/corpus1.model.trainables.* with mmap=None
+2020-06-11 08:34:56|INFO loading syn1neg from ./experiments/experiment_0/model/swedish/corpus1.model.trainables.syn1neg.npy with mmap=None
+2020-06-11 08:34:56|INFO setting ignored attribute cum_table to None
+2020-06-11 08:34:56|INFO loaded ./experiments/experiment_0/model/swedish/corpus1.model
+2020-06-11 08:34:57|INFO loading Word2Vec object from ./experiments/experiment_0/model/swedish/corpus2.model
+2020-06-11 08:34:57|DEBUG {'uri': './experiments/experiment_0/model/swedish/corpus2.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:34:58|INFO loading wv recursively from ./experiments/experiment_0/model/swedish/corpus2.model.wv.* with mmap=None
+2020-06-11 08:34:58|INFO loading vectors from ./experiments/experiment_0/model/swedish/corpus2.model.wv.vectors.npy with mmap=None
+2020-06-11 08:34:58|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:34:58|INFO loading vocabulary recursively from ./experiments/experiment_0/model/swedish/corpus2.model.vocabulary.* with mmap=None
+2020-06-11 08:34:58|INFO loading trainables recursively from ./experiments/experiment_0/model/swedish/corpus2.model.trainables.* with mmap=None
+2020-06-11 08:34:58|INFO loading syn1neg from ./experiments/experiment_0/model/swedish/corpus2.model.trainables.syn1neg.npy with mmap=None
+2020-06-11 08:34:58|INFO setting ignored attribute cum_table to None
+2020-06-11 08:34:58|INFO loaded ./experiments/experiment_0/model/swedish/corpus2.model
+2020-06-11 08:34:59|INFO CLassification score for swedish
+2020-06-11 08:34:59|INFO 
                   precision    recall  f1-score   support
 
-class 0 (stable)       0.73      0.96      0.83        23
-class 1 (change)       0.00      0.00      0.00         8
+class 0 (stable)       0.00      0.00      0.00        23
+class 1 (change)       0.26      1.00      0.41         8
 
-        accuracy                           0.71        31
-       macro avg       0.37      0.48      0.42        31
-    weighted avg       0.54      0.71      0.62        31
+        accuracy                           0.26        31
+       macro avg       0.13      0.50      0.21        31
+    weighted avg       0.07      0.26      0.11        31
 
-2020-06-10 18:41:52|INFO CLassification score for swedish
-2020-06-10 18:41:52|INFO Spearman score for swedish: -0.40631592860830884
-2020-06-10 18:41:52|INFO loading Word2Vec object from ./experiments/experiment_0/model/german/corpus1.model
-2020-06-10 18:41:52|DEBUG {'uri': './experiments/experiment_0/model/german/corpus1.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
-2020-06-10 18:41:53|INFO loading wv recursively from ./experiments/experiment_0/model/german/corpus1.model.wv.* with mmap=None
-2020-06-10 18:41:53|INFO loading vectors from ./experiments/experiment_0/model/german/corpus1.model.wv.vectors.npy with mmap=None
-2020-06-10 18:41:53|INFO setting ignored attribute vectors_norm to None
-2020-06-10 18:41:53|INFO loading vocabulary recursively from ./experiments/experiment_0/model/german/corpus1.model.vocabulary.* with mmap=None
-2020-06-10 18:41:53|INFO loading trainables recursively from ./experiments/experiment_0/model/german/corpus1.model.trainables.* with mmap=None
-2020-06-10 18:41:53|INFO loading syn1neg from ./experiments/experiment_0/model/german/corpus1.model.trainables.syn1neg.npy with mmap=None
-2020-06-10 18:41:53|INFO setting ignored attribute cum_table to None
-2020-06-10 18:41:53|INFO loaded ./experiments/experiment_0/model/german/corpus1.model
-2020-06-10 18:41:54|INFO loading Word2Vec object from ./experiments/experiment_0/model/german/corpus2.model
-2020-06-10 18:41:54|DEBUG {'uri': './experiments/experiment_0/model/german/corpus2.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
-2020-06-10 18:41:55|INFO loading wv recursively from ./experiments/experiment_0/model/german/corpus2.model.wv.* with mmap=None
-2020-06-10 18:41:55|INFO loading vectors from ./experiments/experiment_0/model/german/corpus2.model.wv.vectors.npy with mmap=None
-2020-06-10 18:41:55|INFO setting ignored attribute vectors_norm to None
-2020-06-10 18:41:55|INFO loading vocabulary recursively from ./experiments/experiment_0/model/german/corpus2.model.vocabulary.* with mmap=None
-2020-06-10 18:41:55|INFO loading trainables recursively from ./experiments/experiment_0/model/german/corpus2.model.trainables.* with mmap=None
-2020-06-10 18:41:55|INFO loading syn1neg from ./experiments/experiment_0/model/german/corpus2.model.trainables.syn1neg.npy with mmap=None
-2020-06-10 18:41:55|INFO setting ignored attribute cum_table to None
-2020-06-10 18:41:55|INFO loaded ./experiments/experiment_0/model/german/corpus2.model
-2020-06-10 18:41:56|INFO CLassification score for german
-2020-06-10 18:41:56|INFO 
+2020-06-11 08:34:59|INFO CLassification score for swedish
+2020-06-11 08:34:59|INFO Spearman score for swedish: -0.40631592860830884
+2020-06-11 08:34:59|INFO loading Word2Vec object from ./experiments/experiment_0/model/german/corpus1.model
+2020-06-11 08:34:59|DEBUG {'uri': './experiments/experiment_0/model/german/corpus1.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:35:00|INFO loading wv recursively from ./experiments/experiment_0/model/german/corpus1.model.wv.* with mmap=None
+2020-06-11 08:35:00|INFO loading vectors from ./experiments/experiment_0/model/german/corpus1.model.wv.vectors.npy with mmap=None
+2020-06-11 08:35:00|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:35:00|INFO loading vocabulary recursively from ./experiments/experiment_0/model/german/corpus1.model.vocabulary.* with mmap=None
+2020-06-11 08:35:00|INFO loading trainables recursively from ./experiments/experiment_0/model/german/corpus1.model.trainables.* with mmap=None
+2020-06-11 08:35:00|INFO loading syn1neg from ./experiments/experiment_0/model/german/corpus1.model.trainables.syn1neg.npy with mmap=None
+2020-06-11 08:35:00|INFO setting ignored attribute cum_table to None
+2020-06-11 08:35:00|INFO loaded ./experiments/experiment_0/model/german/corpus1.model
+2020-06-11 08:35:01|INFO loading Word2Vec object from ./experiments/experiment_0/model/german/corpus2.model
+2020-06-11 08:35:01|DEBUG {'uri': './experiments/experiment_0/model/german/corpus2.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:35:02|INFO loading wv recursively from ./experiments/experiment_0/model/german/corpus2.model.wv.* with mmap=None
+2020-06-11 08:35:02|INFO loading vectors from ./experiments/experiment_0/model/german/corpus2.model.wv.vectors.npy with mmap=None
+2020-06-11 08:35:02|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:35:02|INFO loading vocabulary recursively from ./experiments/experiment_0/model/german/corpus2.model.vocabulary.* with mmap=None
+2020-06-11 08:35:02|INFO loading trainables recursively from ./experiments/experiment_0/model/german/corpus2.model.trainables.* with mmap=None
+2020-06-11 08:35:02|INFO loading syn1neg from ./experiments/experiment_0/model/german/corpus2.model.trainables.syn1neg.npy with mmap=None
+2020-06-11 08:35:02|INFO setting ignored attribute cum_table to None
+2020-06-11 08:35:02|INFO loaded ./experiments/experiment_0/model/german/corpus2.model
+2020-06-11 08:35:03|INFO CLassification score for german
+2020-06-11 08:35:03|INFO 
                   precision    recall  f1-score   support
 
-class 0 (stable)       0.62      0.90      0.74        31
-class 1 (change)       0.00      0.00      0.00        17
+class 0 (stable)       0.00      0.00      0.00        31
+class 1 (change)       0.35      1.00      0.52        17
 
-        accuracy                           0.58        48
-       macro avg       0.31      0.45      0.37        48
-    weighted avg       0.40      0.58      0.48        48
+        accuracy                           0.35        48
+       macro avg       0.18      0.50      0.26        48
+    weighted avg       0.13      0.35      0.19        48
 
-2020-06-10 18:41:56|INFO CLassification score for german
-2020-06-10 18:41:56|INFO Spearman score for german: -0.6435660363097846
+2020-06-11 08:35:03|INFO CLassification score for german
+2020-06-11 08:35:03|INFO Spearman score for german: -0.6435660363097846
+2020-06-11 08:36:19|INFO loading Word2Vec object from ./experiments/experiment_0/model/latin/corpus1.model
+2020-06-11 08:36:19|DEBUG {'uri': './experiments/experiment_0/model/latin/corpus1.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:36:19|INFO loading wv recursively from ./experiments/experiment_0/model/latin/corpus1.model.wv.* with mmap=None
+2020-06-11 08:36:19|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:36:19|INFO loading vocabulary recursively from ./experiments/experiment_0/model/latin/corpus1.model.vocabulary.* with mmap=None
+2020-06-11 08:36:19|INFO loading trainables recursively from ./experiments/experiment_0/model/latin/corpus1.model.trainables.* with mmap=None
+2020-06-11 08:36:19|INFO setting ignored attribute cum_table to None
+2020-06-11 08:36:19|INFO loaded ./experiments/experiment_0/model/latin/corpus1.model
+2020-06-11 08:36:19|INFO loading Word2Vec object from ./experiments/experiment_0/model/latin/corpus2.model
+2020-06-11 08:36:19|DEBUG {'uri': './experiments/experiment_0/model/latin/corpus2.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:36:20|INFO loading wv recursively from ./experiments/experiment_0/model/latin/corpus2.model.wv.* with mmap=None
+2020-06-11 08:36:20|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:36:20|INFO loading vocabulary recursively from ./experiments/experiment_0/model/latin/corpus2.model.vocabulary.* with mmap=None
+2020-06-11 08:36:20|INFO loading trainables recursively from ./experiments/experiment_0/model/latin/corpus2.model.trainables.* with mmap=None
+2020-06-11 08:36:20|INFO setting ignored attribute cum_table to None
+2020-06-11 08:36:20|INFO loaded ./experiments/experiment_0/model/latin/corpus2.model
+2020-06-11 08:36:20|INFO CLassification score for latin
+2020-06-11 08:36:20|INFO 
+                  precision    recall  f1-score   support
+
+class 0 (stable)       0.44      0.57      0.50        14
+class 1 (change)       0.73      0.62      0.67        26
+
+        accuracy                           0.60        40
+       macro avg       0.59      0.59      0.58        40
+    weighted avg       0.63      0.60      0.61        40
+
+2020-06-11 08:36:20|INFO CLassification score for latin
+2020-06-11 08:36:20|INFO Spearman score for latin: -0.32693841210505986
+2020-06-11 08:36:20|INFO loading Word2Vec object from ./experiments/experiment_0/model/english/corpus1.model
+2020-06-11 08:36:20|DEBUG {'uri': './experiments/experiment_0/model/english/corpus1.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:36:21|INFO loading wv recursively from ./experiments/experiment_0/model/english/corpus1.model.wv.* with mmap=None
+2020-06-11 08:36:21|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:36:21|INFO loading vocabulary recursively from ./experiments/experiment_0/model/english/corpus1.model.vocabulary.* with mmap=None
+2020-06-11 08:36:21|INFO loading trainables recursively from ./experiments/experiment_0/model/english/corpus1.model.trainables.* with mmap=None
+2020-06-11 08:36:21|INFO setting ignored attribute cum_table to None
+2020-06-11 08:36:21|INFO loaded ./experiments/experiment_0/model/english/corpus1.model
+2020-06-11 08:36:21|INFO loading Word2Vec object from ./experiments/experiment_0/model/english/corpus2.model
+2020-06-11 08:36:21|DEBUG {'uri': './experiments/experiment_0/model/english/corpus2.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:36:21|INFO loading wv recursively from ./experiments/experiment_0/model/english/corpus2.model.wv.* with mmap=None
+2020-06-11 08:36:21|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:36:21|INFO loading vocabulary recursively from ./experiments/experiment_0/model/english/corpus2.model.vocabulary.* with mmap=None
+2020-06-11 08:36:21|INFO loading trainables recursively from ./experiments/experiment_0/model/english/corpus2.model.trainables.* with mmap=None
+2020-06-11 08:36:21|INFO setting ignored attribute cum_table to None
+2020-06-11 08:36:21|INFO loaded ./experiments/experiment_0/model/english/corpus2.model
+2020-06-11 08:36:21|INFO CLassification score for english
+2020-06-11 08:36:21|INFO 
+                  precision    recall  f1-score   support
+
+class 0 (stable)       0.65      0.62      0.63        21
+class 1 (change)       0.53      0.56      0.55        16
+
+        accuracy                           0.59        37
+       macro avg       0.59      0.59      0.59        37
+    weighted avg       0.60      0.59      0.60        37
+
+2020-06-11 08:36:21|INFO CLassification score for english
+2020-06-11 08:36:21|INFO Spearman score for english: -0.36979074625917013
+2020-06-11 08:36:21|INFO loading Word2Vec object from ./experiments/experiment_0/model/swedish/corpus1.model
+2020-06-11 08:36:21|DEBUG {'uri': './experiments/experiment_0/model/swedish/corpus1.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:36:22|INFO loading wv recursively from ./experiments/experiment_0/model/swedish/corpus1.model.wv.* with mmap=None
+2020-06-11 08:36:22|INFO loading vectors from ./experiments/experiment_0/model/swedish/corpus1.model.wv.vectors.npy with mmap=None
+2020-06-11 08:36:22|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:36:22|INFO loading vocabulary recursively from ./experiments/experiment_0/model/swedish/corpus1.model.vocabulary.* with mmap=None
+2020-06-11 08:36:22|INFO loading trainables recursively from ./experiments/experiment_0/model/swedish/corpus1.model.trainables.* with mmap=None
+2020-06-11 08:36:22|INFO loading syn1neg from ./experiments/experiment_0/model/swedish/corpus1.model.trainables.syn1neg.npy with mmap=None
+2020-06-11 08:36:22|INFO setting ignored attribute cum_table to None
+2020-06-11 08:36:22|INFO loaded ./experiments/experiment_0/model/swedish/corpus1.model
+2020-06-11 08:36:23|INFO loading Word2Vec object from ./experiments/experiment_0/model/swedish/corpus2.model
+2020-06-11 08:36:23|DEBUG {'uri': './experiments/experiment_0/model/swedish/corpus2.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:36:24|INFO loading wv recursively from ./experiments/experiment_0/model/swedish/corpus2.model.wv.* with mmap=None
+2020-06-11 08:36:24|INFO loading vectors from ./experiments/experiment_0/model/swedish/corpus2.model.wv.vectors.npy with mmap=None
+2020-06-11 08:36:24|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:36:24|INFO loading vocabulary recursively from ./experiments/experiment_0/model/swedish/corpus2.model.vocabulary.* with mmap=None
+2020-06-11 08:36:24|INFO loading trainables recursively from ./experiments/experiment_0/model/swedish/corpus2.model.trainables.* with mmap=None
+2020-06-11 08:36:24|INFO loading syn1neg from ./experiments/experiment_0/model/swedish/corpus2.model.trainables.syn1neg.npy with mmap=None
+2020-06-11 08:36:24|INFO setting ignored attribute cum_table to None
+2020-06-11 08:36:24|INFO loaded ./experiments/experiment_0/model/swedish/corpus2.model
+2020-06-11 08:36:25|INFO CLassification score for swedish
+2020-06-11 08:36:25|INFO 
+                  precision    recall  f1-score   support
+
+class 0 (stable)       1.00      0.04      0.08        23
+class 1 (change)       0.27      1.00      0.42         8
+
+        accuracy                           0.29        31
+       macro avg       0.63      0.52      0.25        31
+    weighted avg       0.81      0.29      0.17        31
+
+2020-06-11 08:36:25|INFO CLassification score for swedish
+2020-06-11 08:36:25|INFO Spearman score for swedish: -0.40631592860830884
+2020-06-11 08:36:25|INFO loading Word2Vec object from ./experiments/experiment_0/model/german/corpus1.model
+2020-06-11 08:36:25|DEBUG {'uri': './experiments/experiment_0/model/german/corpus1.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:36:26|INFO loading wv recursively from ./experiments/experiment_0/model/german/corpus1.model.wv.* with mmap=None
+2020-06-11 08:36:26|INFO loading vectors from ./experiments/experiment_0/model/german/corpus1.model.wv.vectors.npy with mmap=None
+2020-06-11 08:36:26|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:36:26|INFO loading vocabulary recursively from ./experiments/experiment_0/model/german/corpus1.model.vocabulary.* with mmap=None
+2020-06-11 08:36:26|INFO loading trainables recursively from ./experiments/experiment_0/model/german/corpus1.model.trainables.* with mmap=None
+2020-06-11 08:36:26|INFO loading syn1neg from ./experiments/experiment_0/model/german/corpus1.model.trainables.syn1neg.npy with mmap=None
+2020-06-11 08:36:26|INFO setting ignored attribute cum_table to None
+2020-06-11 08:36:26|INFO loaded ./experiments/experiment_0/model/german/corpus1.model
+2020-06-11 08:36:27|INFO loading Word2Vec object from ./experiments/experiment_0/model/german/corpus2.model
+2020-06-11 08:36:27|DEBUG {'uri': './experiments/experiment_0/model/german/corpus2.model', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': {}}
+2020-06-11 08:36:28|INFO loading wv recursively from ./experiments/experiment_0/model/german/corpus2.model.wv.* with mmap=None
+2020-06-11 08:36:28|INFO loading vectors from ./experiments/experiment_0/model/german/corpus2.model.wv.vectors.npy with mmap=None
+2020-06-11 08:36:28|INFO setting ignored attribute vectors_norm to None
+2020-06-11 08:36:28|INFO loading vocabulary recursively from ./experiments/experiment_0/model/german/corpus2.model.vocabulary.* with mmap=None
+2020-06-11 08:36:28|INFO loading trainables recursively from ./experiments/experiment_0/model/german/corpus2.model.trainables.* with mmap=None
+2020-06-11 08:36:28|INFO loading syn1neg from ./experiments/experiment_0/model/german/corpus2.model.trainables.syn1neg.npy with mmap=None
+2020-06-11 08:36:28|INFO setting ignored attribute cum_table to None
+2020-06-11 08:36:28|INFO loaded ./experiments/experiment_0/model/german/corpus2.model
+2020-06-11 08:36:29|INFO CLassification score for german
+2020-06-11 08:36:29|INFO 
+                  precision    recall  f1-score   support
+
+class 0 (stable)       1.00      0.10      0.18        31
+class 1 (change)       0.38      1.00      0.55        17
+
+        accuracy                           0.42        48
+       macro avg       0.69      0.55      0.36        48
+    weighted avg       0.78      0.42      0.31        48
+
+2020-06-11 08:36:29|INFO CLassification score for german
+2020-06-11 08:36:29|INFO Spearman score for german: -0.6435660363097846
