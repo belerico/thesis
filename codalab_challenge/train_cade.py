@@ -3,20 +3,12 @@ import os
 
 from cade.cade import CADE
 
-from config import CURRENT_EXP_DIR, NEW_EXP_NUM, config, get_logger
+from config import CURRENT_EXP_DIR, config, get_logger, log_config
 from preprocess import create_compass
 
 if __name__ == "__main__":
     logger = get_logger()
-    logger.info(
-        "Experiment "
-        + str(NEW_EXP_NUM)
-        + ": "
-        + datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S")
-    )
-    logger.info("Current config:")
-    for k, v in config.items():
-        logger.info(k + ": " + str(v))
+    log_config(logger)
 
     for lang in config["LANG"]:
         # Create compass

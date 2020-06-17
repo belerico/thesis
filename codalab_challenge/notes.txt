@@ -1,0 +1,4 @@
+ACC Swedish 74%: lncs2 >= 0.6
+ACC Latin   70%: cosin >= 0.7
+ACC German  71%: lncs2 >= 0.7
+ACC English 65%: lncs2 >= 0.7

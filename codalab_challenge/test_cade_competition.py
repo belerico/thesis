@@ -3,13 +3,17 @@ import subprocess
 from distutils.dir_util import copy_tree
 
 import numpy
+from cade.metrics.comparative import lncs2
 from gensim.models.word2vec import Word2Vec
 from scipy.spatial.distance import cosine
 
-from config import CURRENT_EXP_DIR, config
+from config import CURRENT_EXP_DIR, config, get_logger, log_config
 
 if __name__ == "__main__":
-    CURRENT_EXP_DIR = CURRENT_EXP_DIR.split("_")[0] + "_0"
+    # CURRENT_EXP_DIR = CURRENT_EXP_DIR.split("_")[0] + "_0"
+    logger = get_logger(exp_dir=CURRENT_EXP_DIR)
+    log_config(logger)
+    logger.info("TEST WITH HAMILTON's LNCS2")
     if not os.path.exists(CURRENT_EXP_DIR + "/res/answer/task1"):
         os.makedirs(CURRENT_EXP_DIR + "/res/answer/task1")
     if not os.path.exists(CURRENT_EXP_DIR + "/res/answer/task2"):
@@ -20,10 +24,18 @@ if __name__ == "__main__":
     for lang in config["LANG"]:
         # Load models
         model1 = Word2Vec.load(
-            CURRENT_EXP_DIR + "/model/" + lang + "/corpus1.model"
+            CURRENT_EXP_DIR.split("_")[0]
+            + "_0"
+            + "/model/"
+            + lang
+            + "/corpus1.model"
         )
         model2 = Word2Vec.load(
-            CURRENT_EXP_DIR + "/model/" + lang + "/corpus2.model"
+            CURRENT_EXP_DIR.split("_")[0]
+            + "_0"
+            + "/model/"
+            + lang
+            + "/corpus2.model"
         )
         # Load binary truths
         binary_truth = numpy.loadtxt(
@@ -39,7 +51,9 @@ if __name__ == "__main__":
         predictions = []
         for word in binary_truth:
             prediction = (
-                0 if 1 - cosine(model1[word], model2[word]) >= 0.7 else 1
+                0
+                if lncs2(word, model1, model2, 10) >= config["THRESHOLD"]
+                else 1
             )
             predictions.append([word, str(prediction)])
         numpy.savetxt(
@@ -61,7 +75,7 @@ if __name__ == "__main__":
         # Task 2 - Semantic Shift Score
         scores = []
         for word in score_truth:
-            score = 1 - cosine(model1[word], model2[word])
+            score = lncs2(word, model1, model2, 10)
             scores.append([word, score])
         numpy.savetxt(
             CURRENT_EXP_DIR + "/res/answer/task2/" + lang + ".txt",
@@ -69,4 +83,6 @@ if __name__ == "__main__":
             fmt="%s",
             delimiter="\t",
         )
-    subprocess.run(["./scoring_program/evaluation.py", CURRENT_EXP_DIR, CURRENT_EXP_DIR])
+    subprocess.run(
+        ["./scoring_program/evaluation.py", CURRENT_EXP_DIR, CURRENT_EXP_DIR]
+    )
