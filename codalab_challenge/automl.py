@@ -186,7 +186,7 @@ if __name__ == "__main__":
         logger.info(
             "BEST PARAMETERS: "
             + ", ".join([k + ": " + str(v) for k, v in best[0].items()])
-            + ", F1: "
+            + ", ACCU: "
             + str(best[1])
         )
         logger.info("OPTIMIZATION HISTORY")
