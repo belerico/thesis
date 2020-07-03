@@ -11,13 +11,14 @@ unordered_map<string, int> get_corpus_frequency(const string &corpus_path)
 {
     unordered_map<string, int> freqs{};
     stringstream ss{};
+    istream_iterator<string> end;
     ifstream ifs{corpus_path};
     if (ifs)
     {
         for (string line; getline(ifs, line);)
         {
             ss << line;
-            for (istream_iterator<string> token(ss), end; token != end; ++token)
+            for (istream_iterator<string> token(ss); token != end; ++token)
                 ++freqs[*token];
             ss.str("");
             ss.clear();
