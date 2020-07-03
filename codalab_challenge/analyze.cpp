@@ -1,14 +1,14 @@
 #include <fstream>
 #include <iostream>
-#include <map>
+#include <unordered_map>
 #include <sstream>
 #include <string>
 
 using namespace std;
 
-map<string, int> get_corpus_frequency(const string &corpus_path)
+unordered_map<string, int> get_corpus_frequency(const string &corpus_path)
 {
-    map<string, int> freqs;
+    unordered_map<string, int> freqs;
     ifstream ifs{corpus_path};
     if (ifs)
     {
@@ -30,8 +30,8 @@ int main(int argc, char *argv[])
         double c1_lenght, c2_length, fr;
         string word;
         ifstream truth{argv[1]};
-        map<string, int> freqs_c1 = get_corpus_frequency(argv[2]);
-        map<string, int> freqs_c2 = get_corpus_frequency(argv[3]);
+        unordered_map<string, int> freqs_c1 = get_corpus_frequency(argv[2]);
+        unordered_map<string, int> freqs_c2 = get_corpus_frequency(argv[3]);
         c1_lenght = freqs_c1.size();
         c2_length = freqs_c2.size();
         cout << "There're " << c1_lenght << " unique elements in corpus 1" << endl;
