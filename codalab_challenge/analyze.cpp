@@ -1,26 +1,31 @@
 #include <fstream>
 #include <iostream>
-#include <unordered_map>
+#include <iterator>
 #include <sstream>
 #include <string>
+#include <unordered_map>
 
 using namespace std;
 
 unordered_map<string, int> get_corpus_frequency(const string &corpus_path)
 {
-    unordered_map<string, int> freqs;
+    unordered_map<string, int> freqs{};
+    stringstream ss{};
     ifstream ifs{corpus_path};
     if (ifs)
     {
-        for (string line; getline(ifs, line, ' ');)
+        for (string line; getline(ifs, line);)
         {
-            if (line.length() > 0)
-                ++freqs[line];
+            ss << line;
+            for (istream_iterator<string> token(ss), end; token != end; ++token)
+                ++freqs[*token];
+            ss.str("");
+            ss.clear();
         }
     }
     else
         cerr << "Error reading file: " << corpus_path << endl;
-    return freqs;
+    return move(freqs);
 }
 int main(int argc, char *argv[])
 {
