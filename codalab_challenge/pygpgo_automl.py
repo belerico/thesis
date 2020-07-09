@@ -2,7 +2,7 @@ import functools
 import pprint
 
 import numpy as np
-from cade.metrics.comparative import lncs2
+from cade.metrics.comparative import lncs2, intersection_nn, moving_lncs2
 from gensim.models.word2vec import Word2Vec
 from pyGPGO.acquisition import Acquisition
 from pyGPGO.covfunc import squaredExponential
@@ -82,8 +82,9 @@ def myUpdateGP(self):
 
 
 def get_fitness_for_automl(model1, model2, binary_truth, logger):
-    def fitness(threshold: float, similarity: str, topn: int):
+    def fitness(threshold: float, topn: int, t: float):
 
+        similarity = 3
         # Task 1 - Binary Classification
         predictions = []
         for word in binary_truth[:, 0]:
@@ -96,6 +97,18 @@ def get_fitness_for_automl(model1, model2, binary_truth, logger):
             elif similarity == 1:  # lncs2 similarity
                 prediction = (
                     0 if lncs2(word, model1, model2, topn) >= threshold else 1
+                )
+            elif similarity == 2:  # intersection of nearest neighbours
+                prediction = (
+                    1
+                    if intersection_nn(word, model1, model2, topn) >= threshold
+                    else 0
+                )
+            elif similarity == 3:
+                prediction = (
+                    0
+                    if moving_lncs2(word, model1, model2, topn, t) >= threshold
+                    else 1
                 )
             predictions.append(prediction)
 
@@ -133,13 +146,17 @@ if __name__ == "__main__":
     logger = get_logger(exp_dir=CURRENT_EXP_DIR)
     log_config(logger)
     logger.info("AUTOML ON ACCURACY")
+    logger.info("MOVING LNCS2")
     furtherEvaluations = 30
     param = {
-        "threshold": ("cont", [5e-1, 8e-1]),
-        "topn": ("int", [1, 30]),
-        "similarity": ("int", [0, 1]),
+        "threshold": ("cont", [5e-1, 85e-2]),
+        "topn": ("int", [10, 50]),
+        "t": ("cont", [0.0, 1.0])
+        # "similarity": ("int", [0, 1]),
     }
-    init_rand_configs = [{"threshold": 0.7, "topn": 5, "similarity": 1,}]
+    init_rand_configs = [
+        {"threshold": 0.7, "topn": 25, "t": 0.5}
+    ]  ## "topn": 5, "similarity": 1,
 
     for lang in config["LANG"]:
         model1 = Word2Vec.load(

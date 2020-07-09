@@ -48,24 +48,14 @@ int main(int argc, char *argv[])
             while (i < 1 && getline(ss, word, '\t'))
                 ++i;
             i = 0;
-            try
-            {
-                fr = freqs_c1.at(word);
-                cout << word << ": " << fr << " times in corpus 1. fr = " << (fr / c1_lenght) << endl;
-            }
-            catch (out_of_range)
-            {
+            if (freqs_c1.count(word) > 0)
+                cout << word << ": " << freqs_c1[word] << " times in corpus 1. fr = " << (freqs_c1[word] / c1_lenght) << endl;
+            else
                 cout << "Error! " << word << " does not appear in corpus 1" << endl;
-            }
-            try
-            {
-                fr = freqs_c2.at(word);
-                cout << word << ": " << fr << " times in corpus 1. fr = " << (fr / c2_length) << endl;
-            }
-            catch (out_of_range)
-            {
+            if (freqs_c2.count(word) > 0)
+                cout << word << ": " << freqs_c2[word] << " times in corpus 2. fr = " << (freqs_c2[word] / c2_length) << endl;
+            else
                 cout << "Error! " << word << " does not appear in corpus 2" << endl;
-            }
         }
     }
     else
