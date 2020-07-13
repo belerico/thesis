@@ -1,9 +1,11 @@
 codalab_challenge/data/
+codalab_challenge/scoring_program/
+codalab_challenge/submissions/
 codalab_challenge/starting_kit/
 codalab_challenge/model/
-codalab_challenge/experiments/*
-examples/*
-model/*
+codalab_challenge/experiments/
+examples/
+model/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
